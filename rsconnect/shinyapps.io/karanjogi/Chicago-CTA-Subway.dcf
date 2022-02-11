@@ -1,0 +1,14 @@
+name: Chicago-CTA-Subway
+title: Chicago-CTA-Subway
+username:
+account: karanjogi
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 5629910
+bundleId: 5567590
+url: https://karanjogi.shinyapps.io/Chicago-CTA-Subway/
+when: 1644562317.54438
+lastSyncTime: 1644562317.54441
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .gitattributes
