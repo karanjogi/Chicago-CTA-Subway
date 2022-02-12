@@ -31,6 +31,8 @@ cta_uic_2002 <- cta_oha %>% filter(year(date) == 2002)
 
 cta_ros_2019 <-  cta_ros %>% filter(year(date) == 2019)
 cta_ros_2001 <- cta_ros %>% filter(year(date) == 2001)
+cta_ros_2006 <-  cta_ros %>% filter(year(date) == 2006)
+cta_ros_2008 <-  cta_ros %>% filter(year(date) == 2008)
 
 cta_oha_2019 <- cta_oha %>% filter(year(date) == 2019)
 cta_oha_2017 <- cta_oha %>% filter(year(date) == 2017)
@@ -149,8 +151,8 @@ ui <- fluidPage(
                               "NLDS Series Cubs matchup" = 6,
                               "Train Collision on March 24" = 7,
                               "UIC Halsted reconstruction as part of Circle Interchange project" = 8,
-                              "date 9" = 9,
-                              "date 10" = 10
+                              "Wizard World Chicago Convention on August 4" = 9,
+                              "Suspension of part of the Blue Line for Three Weeks" = 10
                               ),
                   selectize = FALSE)
       )
@@ -384,9 +386,26 @@ server <- function(input, output, session) {
         theme(plot.title = element_text(face = "bold"))
       ,
       
-      "9" = ,
+      "9" = ggplot(cta_ros_2006,
+                   aes(x=date,
+                       y=rides)
+                   ) +
+        geom_bar(stat = "identity", fill = "steelblue") +
+        theme_gray() +
+        labs(title = "Wizard World Chicago Convention on August 4", x = "Date", y = "Number of entries") +
+        scale_y_continuous(labels = comma) +
+        theme(plot.title = element_text(face = "bold"))
+      ,
       
-      "10" = 
+      "10" = ggplot(cta_ros_2008,
+                    aes(x=date,
+                        y=rides)
+                    ) +
+        geom_bar(stat = "identity", fill = "steelblue") +
+        theme_gray() +
+        labs(title = "Suspension of part of the Blue Line for Three Weeks", x = "Date", y = "Number of entries") +
+        scale_y_continuous(labels = comma) +
+        theme(plot.title = element_text(face = "bold"))
     )
   }
     

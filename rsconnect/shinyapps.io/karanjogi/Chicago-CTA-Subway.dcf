@@ -5,10 +5,10 @@ account: karanjogi
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 5629910
-bundleId: 5567590
+bundleId: 5573016
 url: https://karanjogi.shinyapps.io/Chicago-CTA-Subway/
-when: 1644562317.54438
-lastSyncTime: 1644562317.54441
+when: 1644700737.14205
+lastSyncTime: 1644700737.14206
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: .gitattributes
